@@ -55,6 +55,12 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 
 После ввода индекса и оптимизации запроса скорость выполнения стала мгновенной в отличие от исходного запроса.
 
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/205.jpg)
+
+upd! 
+
+Вариант с переписанным условием where.
+
 ---
 
 ## Дополнительные задания (со звёздочкой*)
