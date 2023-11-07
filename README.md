@@ -21,6 +21,8 @@
 
 ### Ответ на задание 1
 
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/101.jpg)
+
 ---
 
 ### Задание 2
@@ -35,6 +37,23 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 - оптимизируйте запрос: внесите корректировки по использованию операторов, при необходимости добавьте индексы.
 
 ### Ответ на задание 2
+
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/201.jpg)
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/202.jpg)
+
+Судя по полученным данным узкие места (несмотря на мой старенький ноутбук) там, где тратится большое время для выполнения запроса и большое количество строк (642 тыс.) для анализа.
+
+Попробуем добавить индекс:
+
+**create index payment_date on payment(payment_date)**
+
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/203.jpg)
+
+Оптимизируем запрос.
+
+![](https://github.com/alexei-golovin/SYS-23-12-05/blob/main/files/204.jpg)
+
+После ввода индекса и оптимизации запроса скорость выполнения стала мгновенной в отличие от исходного запроса.
 
 ---
 
